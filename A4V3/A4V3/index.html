@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="validation.js"></script>
+	</head>
+	<script>
+		$(document).ready(function(){
+			$("#arthas").click(function(){
+				$("#arthas").hide();
+			});
+		});
+		$(document).ready(function(){
+			$("form").click(function(){
+				$("#arthas").show();
+			});
+		});
+	</script>
+	<body>
+		<div>
+			<p id="output"></p>
+			<h1>Arthas Statue</h1>
+		
+			<h2>Get yours today for the low price of $20.<h2>
+			
+			<img id = "arthas" src="images/arthas.jpg" alt="Arthas Figure" style="width:304px;height:228px;">
+			
+			<form action="receipt.php" method="post" onsubmit = "return validate()">
+				fields with red stars are mandatory.
+				<br>
+				<br>
+				Please enter your first and last name.
+				<span style="color:red">*</span>
+				<input type = "text" value = "Arthas Menethil" name="name" id="name"><br>
+				
+				Please enter your address.
+				<span style="color:red">*</span>
+				<input type = "text" value = "123 Boulder Road" name="address" id="address"><br>
+				
+				Please enter your City.
+				<span style="color:red">*</span>
+				<input type = "text" value = "Cambridge" name="city" id="city">
+				<br>
+				
+				Please select your province.
+				<span style="color:red">*</span>
+				<select name="province" id="province">
+					<option value="Ontario">Ontario</option>
+					<option value="British Columbia">British Columbia</option>
+					<option value="Alberta">Alberta</option>
+					<option value="Manitoba">Manitoba</option>
+					<option value="New Brunswick">New Brunswick</option>
+					<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+					<option value="Northwest Territories">Northwest Territories</option>
+					<option value="Nova Scotia">Nova Scotia</option>
+					<option value="Nunavut">Nunavut</option>
+					<option value="Prince Edward Island">Prince Edward Island</option>
+					<option value="Quebec">Quebec</option>
+					<option value="Saskatchewan">Saskatchewan</option>
+					<option value="Yukon">Yukon</option>
+				</select>
+				<br>
+				
+				Please enter your postal code.
+				<span style="color:red">*</span>
+				<input type = "text" value = "N48-Y6T" name="postalCode" id="postalCode"><br>
+				
+				Please select the quantity you wish to order.(Minimum is 1 and maximum is 10)
+				<span style="color:red">*</span>
+				<input type="number" id="quantity" value = "1" name="quantity" min="1" max="10" /><br>
+				
+				
+				Please enter your phone number.
+				<input type = "text" value = "555-5555" name="phoneNumber" id="phoneNumber"><br>
+				
+				Please enter your email adress.
+				<input type = "text" value = "fakeemail555@hotmail.com" name="email" id="email"><br>
+				<input type="submit" value="Submit" style="align-content:center; margin-left:250px">
+				<input type="reset" onclick = "clearOutput()" value="Reset" style="align-content:center; margin-left:20px">
+			</form>
+		</div>
+	</body>
+	
+	<style>
+		div{
+			background-color: #c6c6c6;
+			width: 1125px;
+			margin: auto;
+		}
+		body{
+			background-image: url("images/arthasBack.jpg");
+			background-repeat: no repeat;
+		}
+		h1{
+			font-size: 75px;
+			color: black;
+		}	
+		  h2{
+			font-size: 30px;
+			color: blue;
+		}	
+		 h3{
+			font-size: 20px;
+		}
+		 form{
+			color: red;
+		   }
+		 p{
+			font-size: 30px;
+			color: red;
+		}
+	</style>
+</html>
